@@ -1,0 +1,41 @@
+﻿  P19043.cpp
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(60): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(36): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(61): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(60): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(63): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(61): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(64): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(63): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(65): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(64): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(66): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(65): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(67): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\resource.h(66): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(506): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(507): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(509): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(510): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(677): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(677): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(680): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(680): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(683): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(683): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(686): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(686): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(689): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(689): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(692): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(692): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(695): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(695): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(698): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(698): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(701): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(701): warning C4309: '=': truncation of constant value
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(759): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(979): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\visual studio 2017\projects\p19043\p19043\p19043.cpp(988): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+  P19043.vcxproj -> C:\Users\jmh1476\Documents\Visual Studio 2017\Projects\P19043\Debug\P19043.exe
