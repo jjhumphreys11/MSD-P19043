@@ -52,6 +52,8 @@ void setup()
   StartTime = 1;
 
   // sets digital pins 22-31 high (5V) for use as power connections
+  // each pin can deliver up to 40mA
+  // all pins combined can deliver up to 200mA
   for(int t = 22; t <=31; t++)
   {
     pinMode(t, OUTPUT);
