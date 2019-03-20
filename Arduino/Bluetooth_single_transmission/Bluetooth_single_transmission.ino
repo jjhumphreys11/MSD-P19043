@@ -141,55 +141,26 @@ void loop(void)
  if(Serial1.available() > 0)
  {
   mode = Serial1.read();
- if(mode == 'R')
+ if(mode == 'R')// all data transmitted
  {
-  //delay(500);
-  //serialFlush();
   StartTime = millis();
   while(Serial1.read() != 'D')
   {
-    final_val = "";
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-    
-    // Do the same thing as above but for the second sensor (Hand Sensor)
+    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
     acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
     gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
     CurrentTime = (millis()-StartTime)/1000.0;
-
-       if(true)
-       {
-        Serial1.print(
-          CurrentTime + "," 
-          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-          + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-          + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
-          + analogRead(A0) + "," + analogRead(A1) + ","
-          + analogRead(A2) + "," + analogRead(A3) + "\n"
-          );
-       }
-       else
-       {
-          acc1x = String(acc1.x(), 2);
-          acc1y = String(acc1.y(), 2);
-          acc1z = String(acc1.z(), 2);
-          gyro1x = String(gyro1.x(), 2);
-          gyro1y = String(gyro1.y(), 2);
-          gyro1z = String(gyro1.z(), 2);
-          acc2x = String(acc2.x(), 2);
-          acc2y = String(acc2.y(), 2);
-          acc2z = String(acc2.z(), 2);
-          gyro2x = String(gyro2.x(), 2);
-          gyro2y = String(gyro2.y(), 2);
-          gyro2z = String(gyro2.z(), 2);
-          final_val = CurrentTime + "," + acc1x + "," + acc1y + "," + acc1z + ",";
-          final_val = final_val + gyro1x + "," + gyro1y + "," + gyro1z + ","; 
-          final_val = final_val + acc2x + "," + acc2y + "," + acc2z + ",";
-          final_val = final_val + gyro2x + "," + gyro2y + "," + gyro2z + ","; 
-          final_val = final_val + analogRead(A0) + "," + analogRead(A1) + "," + analogRead(A2) + "," + analogRead(A3) + "\n";
-          Serial1.print(final_val);
-       }
+    
+    Serial1.print(
+      (CurrentTime, 3) + "," 
+      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+      + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+      + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
+      + analogRead(A0) + "," + analogRead(A1) + ","
+      + analogRead(A2) + "," + analogRead(A3) + "\n"
+      );
   }
   delay(100);
   serialFlush();
@@ -198,101 +169,77 @@ void loop(void)
  {
   Serial1.print("S");
  }
- else if(mode == 'W')// Wired connection, all sensors
- {
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-    
-    // Do the same thing as above but for the second sensor (Hand Sensor)
-    acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-    gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    CurrentTime = (millis()-StartTime)/1000.0;
-
-     Serial1.print(
-       CurrentTime + "," 
-       + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-       + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-       + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-       + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
-       + analogRead(A0) + "," + analogRead(A1) + ","
-       + analogRead(A2) + "," + analogRead(A3) + "\n"
-       );
- }
  else if(mode == 'T')// no EMG data
  {
   StartTime = millis();
   while(Serial1.read() != 'D')
   {
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-    
-    // Do the same thing as above but for the second sensor (Hand Sensor)
+    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
     acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
     gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-       Serial1.print((millis()-StartTime)/1000.0, 3);
-       Serial1.print(",");
-       Serial1.print(acc1.x()); //Print x axis
-       Serial1.print(",");
-       Serial1.print(acc1.y()); //Print y axis
-       Serial1.print(",");
-       Serial1.print(acc1.z()); //Print z axis
-       Serial1.print(",");
-       
-       Serial1.print(gyro1.x()); // Print x axis
-       Serial1.print(",");
-       Serial1.print(gyro1.y()); // Print y axis
-       Serial1.print(",");
-       Serial1.print(gyro1.z()); // Print z axis
-       Serial1.print(",");
-
-       Serial1.print(acc2.x());
-       Serial1.print(",");
-       Serial1.print(acc2.y());
-       Serial1.print(",");
-       Serial1.print(acc2.z());
-       Serial1.print(",");
-      
-       Serial1.print(gyro2.x());
-       Serial1.print(",");
-       Serial1.print(gyro2.y());
-       Serial1.print(",");
-       Serial1.print(gyro2.z());
-
-       Serial1.print("\n");
-       
+    CurrentTime = (millis()-StartTime)/1000.0;
+    Serial1.print(
+      (CurrentTime, 3) + "," 
+      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+      + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+      + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2)
+      + "\n"
+      ); 
   }
   delay(100);
   serialFlush();
  }
- else if(mode == 'N')
+ else if(mode == 'N')// only 1 IMU being used
  {
   StartTime = millis();
   while(Serial1.read() != 'D')
   {
     acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
     gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-       //newTime = (millis() - StartTime)/1000.0;
-       Serial1.print((millis()-StartTime)/1000.0, 3);
-       Serial1.print(",");
-       Serial1.print(acc1.x()); //Print x axis
-       Serial1.print(",");
-       Serial1.print(acc1.y()); //Print y axis
-       Serial1.print(",");
-       Serial1.print(acc1.z()); //Print z axis
-       Serial1.print(",");
-       
-       Serial1.print(gyro1.x()); // Print x axis
-       Serial1.print(",");
-       Serial1.print(gyro1.y()); // Print y axis
-       Serial1.print(",");
-       Serial1.print(gyro1.z()); // Print z axis
-     
-       Serial1.print("\n");
-       //delay(5);
-       
+    CurrentTime = (millis()-StartTime)/1000.0;
+    Serial1.print(
+      (CurrentTime, 3) + "," 
+      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2)
+      + "\n"
+      ); 
   }
   delay(100);
   serialFlush();
  }
  }
+ else if(Serial.available() > 0)
+ {
+  mode = Serial.read();
+  if(mode == 'R')// all data transmitted
+  {
+    StartTime = millis();
+    while(Serial.read() != 'D')
+    {
+      acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+      gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+      acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+      gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+      CurrentTime = (millis()-StartTime)/1000.0;
+    
+      Serial.print(
+        (CurrentTime, 3) + "," 
+        + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+        + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+        + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+        + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
+        + analogRead(A0) + "," + analogRead(A1) + ","
+        + analogRead(A2) + "," + analogRead(A3) + "\n"
+      );
+    }
+    delay(100);
+    serialFlush();
+  }
+  else if(mode ==  'C')// just used to test connection
+  {
+    Serial.print("S");
+  }
+  }
 }
