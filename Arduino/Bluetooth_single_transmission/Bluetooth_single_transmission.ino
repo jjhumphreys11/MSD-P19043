@@ -9,21 +9,6 @@ char mode = 0;
 char t = 0;
 unsigned long StartTime;
 unsigned long CurrentTime;
-String final_val = "";
-
-String acc1x = "";
-String acc1y = "";
-String acc1z = ""; 
-String gyro1x = "";
-String gyro1y = "";
-String gyro1z = ""; 
-
-String acc2x = "";
-String acc2y = "";
-String acc2z = ""; 
-String gyro2x = "";
-String gyro2y = "";
-String gyro2z = ""; 
 
 imu::Vector<3> acc1;
 imu::Vector<3> gyro1;
@@ -69,7 +54,8 @@ void setup()
 
 //Hard coding the Calibration Data, do this after you take the Calibration Values, pg 48 of datasheet to learn how to do this
 // or just search the Adafruit forums, this is done for both sensors
-void setCal(){
+void setCal()
+{
   byte calData;
   bno1.setMode( bno1.OPERATION_MODE_CONFIG );    // Put into CONFIG_Mode
   calData = bno1.setCalvalARL(232);
@@ -97,7 +83,8 @@ void setCal(){
   bno1.setMode( bno1.OPERATION_MODE_NDOF );    // Put into NDOF Mode
 }
 
-void setCal_2(){
+void setCal_2()
+{
   byte calData;
   bno2.setMode( bno2.OPERATION_MODE_CONFIG );    // Put into CONFIG_Mode
 
@@ -130,116 +117,114 @@ void setCal_2(){
   bno2.setMode( bno2.OPERATION_MODE_NDOF );    // Put into NDOF Mode
 }
 
-void serialFlush(){
-  while(Serial1.available() > 0) {
-    t = Serial1.read();
-  }
+void serialFlush()
+{
+  while(Serial1.available() > 0){ t = Serial1.read(); }
+  while(Serial.available() > 0) { t = Serial.read();  }
 } 
 
 void loop(void)
 {
- if(Serial1.available() > 0)
- {
-  mode = Serial1.read();
- if(mode == 'R')// all data transmitted
- {
-  StartTime = millis();
-  while(Serial1.read() != 'D')
+  if(Serial1.available() > 0)
   {
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-    gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    CurrentTime = (millis()-StartTime)/1000.0;
-    
-    Serial1.print(
-      (CurrentTime, 3) + "," 
-      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-      + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-      + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
-      + analogRead(A0) + "," + analogRead(A1) + ","
-      + analogRead(A2) + "," + analogRead(A3) + "\n"
-      );
-  }
-  delay(100);
-  serialFlush();
- }
- else if(mode ==  'C')// just used to test connection
- {
-  Serial1.print("S");
- }
- else if(mode == 'T')// no EMG data
- {
-  StartTime = millis();
-  while(Serial1.read() != 'D')
-  {
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-    gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-    CurrentTime = (millis()-StartTime)/1000.0;
-    Serial1.print(
-      (CurrentTime, 3) + "," 
-      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-      + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-      + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2)
-      + "\n"
-      ); 
-  }
-  delay(100);
-  serialFlush();
- }
- else if(mode == 'N')// only 1 IMU being used
- {
-  StartTime = millis();
-  while(Serial1.read() != 'D')
-  {
-    acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-    gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-    CurrentTime = (millis()-StartTime)/1000.0;
-    Serial1.print(
-      (CurrentTime, 3) + "," 
-      + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-      + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2)
-      + "\n"
-      ); 
-  }
-  delay(100);
-  serialFlush();
- }
- }
- else if(Serial.available() > 0)
- {
-  mode = Serial.read();
-  if(mode == 'R')// all data transmitted
-  {
-    StartTime = millis();
-    while(Serial.read() != 'D')
+    mode = Serial1.read();
+    if(mode == 'R')// all data transmitted
     {
-      acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-      gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-      acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-      gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-      CurrentTime = (millis()-StartTime)/1000.0;
-    
-      Serial.print(
-        (CurrentTime, 3) + "," 
-        + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-        + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-        + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-        + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
-        + analogRead(A0) + "," + analogRead(A1) + ","
-        + analogRead(A2) + "," + analogRead(A3) + "\n"
-      );
+      StartTime = millis();
+      while(Serial1.read() != 'D')
+      {
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        CurrentTime = (millis()-StartTime)/1000.0;
+        Serial1.print(
+          (CurrentTime, 3) + "," 
+          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+          + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+          + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
+          + analogRead(A0) + "," + analogRead(A1) + ","
+          + analogRead(A2) + "," + analogRead(A3) + "\n"
+        );
+      }
+      delay(100);
+      serialFlush();
     }
-    delay(100);
-    serialFlush();
+    else if(mode ==  'C')// just used to test connection
+    {
+    Serial1.print("S");
+    }
+    else if(mode == 'T')// no EMG data
+    {
+      StartTime = millis();
+      while(Serial1.read() != 'D')
+      {
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        CurrentTime = (millis()-StartTime)/1000.0;
+        Serial1.print(
+          (CurrentTime, 3) + "," 
+          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+          + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+          + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2)
+          + "\n"
+        ); 
+      }
+      delay(100);
+      serialFlush();
+    }
+    else if(mode == 'N')// only 1 IMU being used
+    {
+      StartTime = millis();
+      while(Serial1.read() != 'D')
+      {
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
+        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
+        CurrentTime = (millis()-StartTime)/1000.0;
+        Serial1.print(
+          (CurrentTime, 3) + "," 
+          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2)
+          + "\n"
+        ); 
+      }
+      delay(100);
+      serialFlush();
+    }
   }
-  else if(mode ==  'C')// just used to test connection
+  else if(Serial.available() > 0)
   {
-    Serial.print("S");
-  }
+    mode = Serial.read();
+    if(mode == 'R')// all data transmitted
+    {
+      StartTime = millis();
+      while(Serial.read() != 'D')
+      {
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        CurrentTime = (millis()-StartTime)/1000.0;
+        Serial.print(
+          (CurrentTime, 3) + "," 
+          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
+          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
+          + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
+          + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
+          + analogRead(A0) + "," + analogRead(A1) + ","
+          + analogRead(A2) + "," + analogRead(A3) + "\n"
+        );
+      }
+      delay(100);
+      serialFlush();
+    }
+    else if(mode ==  'C')// just used to test connection
+    {
+      Serial.print("S");
+    }
   }
 }
