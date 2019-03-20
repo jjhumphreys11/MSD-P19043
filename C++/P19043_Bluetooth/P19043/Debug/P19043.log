@@ -1,20 +1,5 @@
-﻿  P19043.cpp
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(63): warning C4005: 'BLANK': macro redefinition
-  c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(36): note: see previous definition of 'BLANK'
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(64): warning C4005: 'BLANK': macro redefinition
-  c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(63): note: see previous definition of 'BLANK'
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(65): warning C4005: 'BLANK': macro redefinition
-  c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(64): note: see previous definition of 'BLANK'
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(66): warning C4005: 'BLANK': macro redefinition
-  c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(65): note: see previous definition of 'BLANK'
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(67): warning C4005: 'BLANK': macro redefinition
-  c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\resource.h(66): note: see previous definition of 'BLANK'
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(504): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(505): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(507): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(508): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(793): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(1063): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(1072): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
-c:\users\jmh1476\documents\visual studio 2017\projects\p19043_bluetooth\p19043\p19043.cpp(1073): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+﻿resource.h(66): warning RC4005: 'BLANK' : redefinition
+  
+resource.h(67): warning RC4005: 'BLANK' : redefinition
+  
   P19043.vcxproj -> C:\Users\jmh1476\Documents\Visual Studio 2017\Projects\P19043_Bluetooth\Debug\P19043.exe
