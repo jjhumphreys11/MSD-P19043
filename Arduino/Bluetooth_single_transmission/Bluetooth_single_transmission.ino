@@ -169,13 +169,13 @@ void loop(void)
        Serial1.print(",");
 
         // Read EMG Sensors
-        Serial1.print("1");//analogRead(A0));
+        Serial1.print(analogRead(A0));
        Serial1.print(",");
-       Serial1.print("2");//analogRead(A1));
+       Serial1.print(analogRead(A1));
        Serial1.print(",");
-       Serial1.print("3");//analogRead(A2));
+       Serial1.print(analogRead(A2));
        Serial1.print(",");
-       Serial1.print("4");//analogRead(A3));
+       Serial1.print(analogRead(A3));
        Serial1.print("\n");
         
 //        CurrentTime = (millis()-StartTime)/1000.0;
@@ -269,13 +269,13 @@ void loop(void)
        Serial.print(",");
 
         // Read EMG Sensors
-        Serial.print("1");//analogRead(A0));
+       Serial.print(analogRead(A0));
        Serial.print(",");
-       Serial.print("2");//analogRead(A1));
+       Serial.print(analogRead(A1));
        Serial.print(",");
-       Serial.print("3");//analogRead(A2));
+       Serial.print(analogRead(A2));
        Serial.print(",");
-       Serial.print("4");//analogRead(A3));
+       Serial.print(analogRead(A3));
        Serial.print("\n");
       }
       delay(100);
