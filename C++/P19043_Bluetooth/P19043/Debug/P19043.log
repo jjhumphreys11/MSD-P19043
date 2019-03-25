@@ -1,5 +1,20 @@
-﻿resource.h(66): warning RC4005: 'BLANK' : redefinition
-  
-resource.h(67): warning RC4005: 'BLANK' : redefinition
-  
-  P19043.vcxproj -> C:\Users\jmh1476\Documents\Visual Studio 2017\Projects\P19043_Bluetooth\Debug\P19043.exe
+﻿  P19043.cpp
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(63): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(36): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(64): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(63): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(65): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(64): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(66): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(65): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(67): warning C4005: 'BLANK': macro redefinition
+  c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\resource.h(66): note: see previous definition of 'BLANK'
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(492): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(493): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(495): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(496): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(781): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(1078): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(1087): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\c++\p19043_bluetooth\p19043\p19043.cpp(1088): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+  P19043.vcxproj -> C:\Users\jmh1476\Documents\MSD-P19043\C++\P19043_Bluetooth\Debug\P19043.exe

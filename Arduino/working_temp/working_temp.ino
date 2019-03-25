@@ -111,8 +111,8 @@ void loop(void)
         acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
         gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
         CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print(
-          (CurrentTime, 3) + "," 
+        Serial1.print(CurrentTime, 3);
+        Serial1.print("," 
           + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
           + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
           + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
@@ -127,6 +127,7 @@ void loop(void)
     else if(mode ==  'C')// just used to test connection
     {
     Serial1.print("S");
+    delay(100);
     }
     else if(mode == 'T')// no EMG data
     {
@@ -138,8 +139,8 @@ void loop(void)
         acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
         gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
         CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print(
-          (CurrentTime, 3) + "," 
+        Serial1.print(CurrentTime, 3);
+        Serial1.print("," 
           + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
           + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
           + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
@@ -158,8 +159,8 @@ void loop(void)
         acc1 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
         gyro1 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
         CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print(
-          (CurrentTime, 3) + "," 
+        Serial1.print(CurrentTime, 3);
+        Serial1.print(","
           + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
           + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2)
           + "\n"
@@ -183,8 +184,8 @@ void loop(void)
         gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
         CurrentTime = (millis()-StartTime)/1000.0;
         //Serial.println("working R.");
-        Serial.print(
-          (CurrentTime, 3) + "," 
+        Serial.print((millis()-StartTime)/1000.0, 3);
+        Serial.print("," 
           + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
           + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
           + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
@@ -199,6 +200,7 @@ void loop(void)
     else if(mode ==  'C')// just used to test connection
     {
       Serial.print("S");
+      delay(100);
     }
   }
 }
