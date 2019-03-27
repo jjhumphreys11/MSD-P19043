@@ -131,6 +131,7 @@ void loop(void)
     mode = Serial1.read();
     if(mode == 'R')// all data transmitted
     {
+      delay(1000);
       StartTime = millis();
       while(Serial1.read() != 'D')
       {
