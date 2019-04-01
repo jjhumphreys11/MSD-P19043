@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kst version="2.0.9">
     <data>
-        <source reader="ASCII file" updateType="0" file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv">
+        <source reader="ASCII file" updateType="0" file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv">
             <properties vector="INDEX" interpretation="1" delimiters="#" columntype="2" columndelimiter="," headerstart="1" fields="0" readfields="true" usedot="true" columnwidthisconst="false" readunits="false" units="0" limitFileBuffer="false" limitFileBufferSize="0" useThreads="0" asciiTimeFormat="hh:mm:ss.zzz" dataRate="1" offsetDateTime="false" offsetFileDate="false" offsetRelavive="true" dateTimeOffset="2018-11-11T14:20:01Z" relativeOffset="0" nanValue="0" updateType="0"/>
         </source>
     </data>
     <variables>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="1" initialXNum="1"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="2" initialXNum="15"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="3" initialXNum="29"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_xt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="4" initialXNum="43"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_yt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="5" initialXNum="57"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_zt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="6" initialXNum="71"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_xr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="7" initialXNum="85"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_yr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="8" initialXNum="99"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_zr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="9" initialXNum="113"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_xt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="10" initialXNum="127"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_yt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="11" initialXNum="141"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_zt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="12" initialXNum="155"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_xr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="13" initialXNum="169"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_yr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="14" initialXNum="183"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_zr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="15" initialXNum="197"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG1" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="16" initialXNum="211"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG2" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="17" initialXNum="225"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG3" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="18" initialXNum="239"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG4" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="19" initialXNum="253"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="20" initialXNum="267"/>
-        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/C++/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="21" initialXNum="281"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="1" initialXNum="1"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="2" initialXNum="15"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="3" initialXNum="29"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_xt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="4" initialXNum="43"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_yt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="5" initialXNum="57"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_zt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="6" initialXNum="71"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_xr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="7" initialXNum="85"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_yr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="8" initialXNum="99"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU1_zr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="9" initialXNum="113"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_xt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="10" initialXNum="127"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_yt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="11" initialXNum="141"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_zt" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="12" initialXNum="155"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_xr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="13" initialXNum="169"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_yr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="14" initialXNum="183"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="IMU2_zr" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="15" initialXNum="197"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG1" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="16" initialXNum="211"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG2" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="17" initialXNum="225"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG3" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="18" initialXNum="239"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="EMG4" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="19" initialXNum="253"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="20" initialXNum="267"/>
+        <datavector file="C:/Users/jmh1476/Documents/MSD-P19043/Completey Working/P19043_Bluetooth/P19043/../Debug/kst_1/kst_2/bin/temp_data.csv" fileRelative="../Debug/kst_1/kst_2/bin/temp_data.csv" field="Time" start="-1" count="847" skip="-1" doAve="false" startUnits="Time" rangeUnits="Time" initialVNum="21" initialXNum="281"/>
     </variables>
     <objects/>
     <relations>
@@ -86,7 +86,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="true" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-1.6000000000000001" width="9.999999999999801" height="3.2000000000000002"/>
+                <projectionrect x="63.282000000001403" y="-1.6000000000000001" width="9.9999999999971863" height="3.2000000000000002"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="6" name="Plot">
                 <position x="834.31119999999999" y="680.99330000000009" z="500"/>
@@ -122,7 +122,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-1.5800000000000001" width="9.999999999999801" height="3.1600000000000001"/>
+                <projectionrect x="63.282000000001403" y="-1.5800000000000001" width="9.9999999999971863" height="3.1600000000000001"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="5" name="Plot">
                 <position x="835.9816705487907" y="552.00782043932554" z="500"/>
@@ -158,7 +158,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-1.5800000000000001" width="9.999999999999801" height="3.1600000000000001"/>
+                <projectionrect x="63.282000000001403" y="-1.5800000000000001" width="9.9999999999971863" height="3.1600000000000001"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="4" name="Plot">
                 <position x="834.99106079300986" y="432.95439830842633" z="502"/>
@@ -194,7 +194,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-5" width="9.999999999999801" height="10"/>
+                <projectionrect x="63.282000000001403" y="-5" width="9.9999999999971863" height="10"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="3" name="Plot">
                 <position x="835.99165351203783" y="309.64353386739384" z="502"/>
@@ -230,7 +230,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-5" width="9.999999999999801" height="10"/>
+                <projectionrect x="63.282000000001403" y="-5" width="9.9999999999971863" height="10"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="2" name="Plot">
                 <position x="834.47860000000003" y="191.78120000000001" z="503"/>
@@ -266,11 +266,11 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000011" y="-5" width="9.999999999999801" height="10"/>
+                <projectionrect x="63.282000000001403" y="-5" width="9.9999999999971863" height="10"/>
             </plot>
             <plot tiedxzoom="false" tiedyzoom="false" leftlabelvisible="true" bottomlabelvisible="false" rightlabelvisible="true" toplabelvisible="true" globalfont="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" globalfontscale="5.7000000000000002" globalfontcolor="#000000" showlegend="true" hidebottomaxislabel="true" hidetopaxislabel="false" hideleftaxislabel="false" hiderightaxislabel="false" numberaxislabelscale="true" initialPlotNum="1" name="Plot">
-                <position x="834.48040000000003" y="71.411199999999994" z="503"/>
-                <rect x="-831.46359999999993" y="-68.409599999999998" width="1662.9271999999999" height="136.8192"/>
+                <position x="834.47860000000003" y="71.407849999999996" z="503"/>
+                <rect x="-831.46359999999993" y="-68.409599999999998" width="1661.9349999999997" height="136.66650000000001"/>
                 <relativesize width="0.99219999999999986" height="0.1527" centerx="0.49790000000000001" centery="0.079699999999999993" posx="0.0018000000000000615" posy="0.0033499999999999958" leftx="0.0018000000000000615" lefty="0.15604999999999999" rightx="0.99399999999999999" righty="0.15604999999999999" fixaspect="false" lockpostodata="false"/>
                 <transform m11="1" m12="0" m13="0" m21="0" m22="1" m23="0" m31="0" m32="0" m33="1"/>
                 <pen style="1" width="1" miterlimit="2" cap="16" joinStyle="64">
@@ -278,9 +278,9 @@
                 </pen>
                 <brush color="#ffffff" alpha="1" style="1"/>
                 <legend auto="true" title="" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5" color="#000000" verticaldisplay="false" name="Legend">
-                    <position x="-741.15589121754533" y="-0.65312456782336881" z="500"/>
+                    <position x="-741.18217776877577" y="-0.72085689274449294" z="500"/>
                     <rect x="0" y="0" width="310" height="17"/>
-                    <relativesize width="0.19412281286210167" height="0.1389806342749135" centerx="0.12355460460718223" centery="0.51305498590717269" posx="0.026493198176131386" posy="0.4435646687697159" leftx="0.026493198176131386" lefty="0.58254530304462937" rightx="0.22061601103823306" righty="0.58254530304462937" fixaspect="false" lockpostodata="false"/>
+                    <relativesize width="0.19424349989191292" height="0.13915435082448951" centerx="0.1236149481220878" centery="0.51314184418196063" posx="0.026493198176131334" posy="0.4435646687697159" leftx="0.026493198176131334" lefty="0.58271901959420547" rightx="0.22073669806804427" righty="0.58271901959420547" fixaspect="false" lockpostodata="false"/>
                     <transform m11="1" m12="0" m13="0" m21="0" m22="1" m23="0" m31="0" m32="0" m33="1"/>
                     <pen style="1" width="1" miterlimit="2" cap="16" joinStyle="64">
                         <brush color="#000000" alpha="1" style="1"/>
@@ -304,7 +304,7 @@
                 <plotlabel id="toplabel" visible="true" overridetext="" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
                 <plotlabel id="bottomlabel" visible="false" overridetext="Time" autolabel="true" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="false"/>
                 <plotlabel id="numberlabel" visible="true" overridetext="" autolabel="false" font="MS Shell Dlg 2,12,-1,5,50,0,0,0,0,0" fontscale="5.7000000000000002" fontcolor="#000000" fontuseglobal="true"/>
-                <projectionrect x="108.30000000000001" y="0" width="10" height="1023"/>
+                <projectionrect x="63.282000000000949" y="0" width="9.9999999999980957" height="1023"/>
             </plot>
         </view>
     </graphics>

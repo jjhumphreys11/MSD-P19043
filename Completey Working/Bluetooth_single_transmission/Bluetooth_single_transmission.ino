@@ -44,7 +44,12 @@ void setup()
   if(!bno2.begin())
   {
     /* There was a problem detecting the BNO055 ... check your connections */
-    //Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
+    //Serial.println("No IMU detected (bno2)");
+  }
+  if(!bno1.begin())
+  {
+    /* There was a problem detecting the BNO055 ... check your connections */
+    //Serial.println("No IMU detected (bno1)");
   }
   setCal();       // Set Calibration Values for Sensor 1 (Wrist)
   setCal_2();      // Set Calibration Values for Sensor 2 (Hand)
@@ -131,7 +136,6 @@ void loop(void)
     mode = Serial1.read();
     if(mode == 'R')// all data transmitted
     {
-      delay(1000);
       StartTime = millis();
       while(Serial1.read() != 'D')
       {
@@ -198,6 +202,19 @@ void loop(void)
     Serial1.print("S");
     delay(10);
     }
+    else if(mode ==  'Q')
+    {
+      if(!bno2.begin())
+      {
+      /* There was a problem detecting the BNO055 ... check your connections */
+        Serial1.println("No IMU detected (bno2)");
+      }
+      if(!bno1.begin())
+      {
+      /* There was a problem detecting the BNO055 ... check your connections */
+        Serial1.println("No IMU detected (bno1)");
+      }
+    }
     else if(mode == 'T')// no EMG data
     {
       StartTime = millis();
@@ -237,8 +254,8 @@ void loop(void)
       {
         acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
         gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        acc2 = acc1; //bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro2 = gyro1; // bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
        Serial.print((millis() - StartTime)/1000.0, 3);
        Serial.print(",");
        Serial.print(acc1.x()); //Print x axis
