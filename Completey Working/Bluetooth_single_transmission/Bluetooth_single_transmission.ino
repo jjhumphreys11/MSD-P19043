@@ -27,30 +27,21 @@ void setup()
   // all pins combined can deliver up to 200mA
   for(int t = 22; t <=27; t++)
   {
+    // sets pins 22-27 High
     pinMode(t, OUTPUT);
     digitalWrite(t, HIGH);
-  }
-  
-  // sets digital pins 44-53 low (0V) for use as ground connections
-  for(int t = 48; t <=53; t++)
-  {
-    pinMode(t, OUTPUT);
-    digitalWrite(t, LOW); 
+    
+    // sets pins 48-53 Low
+    pinMode(t+26, OUTPUT);
+    digitalWrite(t+26, LOW);
   }
   
   Serial1.begin(115200);
   Serial.begin(115200);
   
-  if(!bno2.begin())
-  {
-    /* There was a problem detecting the BNO055 ... check your connections */
-    //Serial.println("No IMU detected (bno2)");
-  }
-  if(!bno1.begin())
-  {
-    /* There was a problem detecting the BNO055 ... check your connections */
-    //Serial.println("No IMU detected (bno1)");
-  }
+  bno1.begin();
+  bno2.begin();
+  
   setCal();       // Set Calibration Values for Sensor 1 (Wrist)
   setCal_2();      // Set Calibration Values for Sensor 2 (Hand)
   bno1.setExtCrystalUse(true);  
@@ -194,8 +185,6 @@ void loop(void)
 //          + analogRead(A2) + "," + analogRead(A3) + "\n"
 //        );
       }
-      delay(100);
-      serialFlush();
     }
     else if(mode ==  'C')// just used to test connection
     {
@@ -215,21 +204,6 @@ void loop(void)
         Serial1.println("No IMU detected (bno1)");
       }
     }
-    else if(mode == 'T')// no EMG data
-    {
-      StartTime = millis();
-      while(Serial1.read() != 'D')
-      {
-        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-        CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print("10,10,10,11,12,13\n"); 
-      }
-      delay(100);
-      serialFlush();
-    }
     else if(mode == 'N')// only 1 IMU being used
     {
       StartTime = millis();
@@ -240,8 +214,6 @@ void loop(void)
         CurrentTime = (millis()-StartTime)/1000.0;
         Serial1.print("10,10,10,11,12,13\n"); 
       }
-      delay(100);
-      serialFlush();
     }
   }
   else if(Serial.available() > 0)
@@ -254,8 +226,8 @@ void loop(void)
       {
         acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
         gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
-        acc2 = acc1; //bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
-        gyro2 = gyro1; // bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
+        acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
        Serial.print((millis() - StartTime)/1000.0, 3);
        Serial.print(",");
        Serial.print(acc1.x()); //Print x axis
@@ -296,13 +268,35 @@ void loop(void)
        Serial.print(analogRead(A3));
        Serial.print("\n");
       }
-      delay(100);
-      serialFlush();
     }
     else if(mode ==  'C')// just used to test connection
     {
       Serial.print("S");
       delay(10);
+    }
+    else if(mode == 'N')// only 1 IMU being used
+    {
+      StartTime = millis();
+      while(Serial.read() != 'D')
+      {
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
+        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
+        CurrentTime = (millis()-StartTime)/1000.0;
+        Serial.print("10,10,10,11,12,13\n"); 
+      }
+    }
+    else if(mode ==  'Q')
+    {
+      if(!bno2.begin())
+      {
+      /* There was a problem detecting the BNO055 ... check your connections */
+        Serial.println("No IMU detected (bno2)");
+      }
+      if(!bno1.begin())
+      {
+      /* There was a problem detecting the BNO055 ... check your connections */
+        Serial.println("No IMU detected (bno1)");
+      }
     }
   }
 }
