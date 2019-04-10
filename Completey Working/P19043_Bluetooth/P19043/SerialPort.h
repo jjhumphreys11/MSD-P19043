@@ -16,6 +16,7 @@ private:
 	COMSTAT status;
 	DWORD errors;
 public:
+	SerialPort();
 	SerialPort(char *portName, int bRate);
 	~SerialPort();
 

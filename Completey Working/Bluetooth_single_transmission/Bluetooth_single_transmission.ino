@@ -9,6 +9,7 @@ char mode = 0;
 char t = 0;
 unsigned long StartTime;
 unsigned long CurrentTime;
+int timeOut;
 
 imu::Vector<3> acc1;
 imu::Vector<3> gyro1;
@@ -25,6 +26,7 @@ void setup()
   // sets digital pins 22-31 high (5V) for use as power connections
   // each pin can deliver up to 40mA
   // all pins combined can deliver up to 200mA
+  timeOut = 0;
   for(int t = 22; t <=27; t++)
   {
     // sets pins 22-27 High
@@ -39,6 +41,7 @@ void setup()
   Serial1.begin(115200);
   Serial.begin(115200);
   
+  
   bno1.begin();
   bno2.begin();
   
@@ -47,6 +50,7 @@ void setup()
   bno1.setExtCrystalUse(true);  
   bno2.setExtCrystalUse(true);
   StartTime = 1;
+  
 }
 
 //Hard coding the Calibration Data, do this after you take the Calibration Values, pg 48 of datasheet to learn how to do this
@@ -127,6 +131,7 @@ void loop(void)
     mode = Serial1.read();
     if(mode == 'R')// all data transmitted
     {
+      timeOut = 0;
       StartTime = millis();
       while(Serial1.read() != 'D')
       {
@@ -188,8 +193,7 @@ void loop(void)
     }
     else if(mode ==  'C')// just used to test connection
     {
-    Serial1.print("S");
-    delay(10);
+      Serial1.print("S");
     }
     else if(mode ==  'Q')
     {
@@ -212,7 +216,7 @@ void loop(void)
         acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
         gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
         CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print("10,10,10,11,12,13\n"); 
+        Serial1.print("15,16,17,11,12,13\n"); 
       }
     }
   }
@@ -272,7 +276,6 @@ void loop(void)
     else if(mode ==  'C')// just used to test connection
     {
       Serial.print("S");
-      delay(10);
     }
     else if(mode == 'N')// only 1 IMU being used
     {
@@ -299,4 +302,5 @@ void loop(void)
       }
     }
   }
+  mode = -1;
 }

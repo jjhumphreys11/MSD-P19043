@@ -1,6 +1,55 @@
 #include "stdafx.h"
 #include "SerialPort.h"
 
+int baudRate_here = 115200;
+char temp_port_name_here[20] = "\\\\.\\COM1";
+
+SerialPort::SerialPort()
+{
+	this->connected = false;
+
+	this->handler = CreateFileA(static_cast<LPCSTR>(temp_port_name_here),
+		GENERIC_READ | GENERIC_WRITE,
+		0,
+		NULL,
+		OPEN_EXISTING,
+		FILE_ATTRIBUTE_NORMAL,
+		NULL);
+	if (this->handler == INVALID_HANDLE_VALUE) {
+		if (GetLastError() == ERROR_FILE_NOT_FOUND) {
+			printf("ERROR: Handle was not attached. Reason: %s not available\n", temp_port_name_here);
+		}
+		else
+		{
+			printf("ERROR!!!");
+		}
+	}
+	else {
+		DCB dcbSerialParameters = { 0 };
+
+		if (!GetCommState(this->handler, &dcbSerialParameters)) {
+			printf("failed to get current serial parameters");
+		}
+		else {
+			dcbSerialParameters.BaudRate = baudRate_here; // will use 115200
+			dcbSerialParameters.ByteSize = 8;
+			dcbSerialParameters.StopBits = ONESTOPBIT;
+			dcbSerialParameters.Parity = NOPARITY;
+			dcbSerialParameters.fDtrControl = DTR_CONTROL_ENABLE;
+
+			if (!SetCommState(handler, &dcbSerialParameters))
+			{
+				printf("ALERT: could not set Serial port parameters\n");
+			}
+			else {
+				this->connected = true;
+				PurgeComm(this->handler, PURGE_RXCLEAR | PURGE_TXCLEAR);
+				Sleep(ARDUINO_WAIT_TIME);
+			}
+		}
+	}
+}
+
 SerialPort::SerialPort(char *portName, int bRate)
 {
 	this->connected = false;
