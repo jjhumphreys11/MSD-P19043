@@ -8,8 +8,6 @@ Adafruit_BNO055 bno2 = Adafruit_BNO055(56, BNO055_ADDRESS_B); //Hand Sensor
 char mode = 0;
 char t = 0;
 unsigned long StartTime;
-unsigned long CurrentTime;
-int timeOut;
 
 imu::Vector<3> acc1;
 imu::Vector<3> gyro1;
@@ -23,24 +21,8 @@ imu::Vector<3> gyro2;
 /**************************************************************************/
 void setup() 
 {
-  // sets digital pins 22-31 high (5V) for use as power connections
-  // each pin can deliver up to 40mA
-  // all pins combined can deliver up to 200mA
-  timeOut = 0;
-  for(int t = 22; t <=27; t++)
-  {
-    // sets pins 22-27 High
-    pinMode(t, OUTPUT);
-    digitalWrite(t, HIGH);
-    
-    // sets pins 48-53 Low
-    pinMode(t+26, OUTPUT);
-    digitalWrite(t+26, LOW);
-  }
-  
   Serial1.begin(115200);
   Serial.begin(115200);
-  
   
   bno1.begin();
   bno2.begin();
@@ -131,11 +113,10 @@ void loop(void)
     mode = Serial1.read();
     if(mode == 'R')// all data transmitted
     {
-      timeOut = 0;
       StartTime = millis();
       while(Serial1.read() != 'D')
       {
-        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);// VECTOR_GRAVITY to check gravity
         gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
         acc2 = bno2.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
         gyro2 = bno2.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);
@@ -178,17 +159,6 @@ void loop(void)
        Serial1.print(",");
        Serial1.print(analogRead(A3));
        Serial1.print("\n");
-        
-//        CurrentTime = (millis()-StartTime)/1000.0;
-//        Serial1.print(
-//          (CurrentTime, 3) + "," 
-//          + String(acc1.x(), 2) + "," + String(acc1.y(), 2) + "," + String(acc1.z(), 2) + ","
-//          + String(gyro1.x(), 2) + "," + String(gyro1.y(), 2) + "," + String(gyro1.z(), 2) + ","
-//          + String(acc2.x(), 2) + "," + String(acc2.y(), 2) + "," + String(acc2.z(), 2) + ","
-//          + String(gyro2.x(), 2) + "," + String(gyro2.y(), 2) + "," + String(gyro2.z(), 2) + ","
-//          + analogRead(A0) + "," + analogRead(A1) + ","
-//          + analogRead(A2) + "," + analogRead(A3) + "\n"
-//        );
       }
     }
     else if(mode ==  'C')// just used to test connection
@@ -206,17 +176,6 @@ void loop(void)
       {
       /* There was a problem detecting the BNO055 ... check your connections */
         Serial1.println("No IMU detected (bno1)");
-      }
-    }
-    else if(mode == 'N')// only 1 IMU being used
-    {
-      StartTime = millis();
-      while(Serial1.read() != 'D')
-      {
-        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-        CurrentTime = (millis()-StartTime)/1000.0;
-        Serial1.print("15,16,17,11,12,13\n"); 
       }
     }
   }
@@ -276,17 +235,6 @@ void loop(void)
     else if(mode ==  'C')// just used to test connection
     {
       Serial.print("S");
-    }
-    else if(mode == 'N')// only 1 IMU being used
-    {
-      StartTime = millis();
-      while(Serial.read() != 'D')
-      {
-        acc1 = bno1.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); //Get an array that has lin acc values for sensor 1
-        gyro1 = bno1.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE); //Get an array that has ang acc values for sensor 1
-        CurrentTime = (millis()-StartTime)/1000.0;
-        Serial.print("10,10,10,11,12,13\n"); 
-      }
     }
     else if(mode ==  'Q')
     {

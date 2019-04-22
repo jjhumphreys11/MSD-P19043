@@ -1,13 +1,12 @@
 ﻿  P19043.cpp
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(471): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(472): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(474): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(475): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(760): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(864): warning C4101: 'tempSportDur': unreferenced local variable
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(863): warning C4101: 'tempSport': unreferenced local variable
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1197): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1206): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1207): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
-c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1283): warning C4018: '>': signed/unsigned mismatch
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(494): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(495): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(497): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(498): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(783): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(890): warning C4101: 'tempSportDur': unreferenced local variable
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1275): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1284): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1285): warning C4244: '=': conversion from 'TCHAR' to 'char', possible loss of data
+c:\users\jmh1476\documents\msd-p19043\completey working\p19043_bluetooth\p19043\p19043.cpp(1397): warning C4018: '>': signed/unsigned mismatch
   P19043.vcxproj -> C:\Users\jmh1476\Documents\MSD-P19043\Completey Working\P19043_Bluetooth\Debug\P19043.exe
