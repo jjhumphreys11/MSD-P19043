@@ -151,7 +151,7 @@ void loop(void)
        Serial1.print(",");
 
         // Read EMG Sensors
-        Serial1.print(analogRead(A0));
+        Serial1.print("0");
        Serial1.print(",");
        Serial1.print(analogRead(A1));
        Serial1.print(",");
@@ -220,16 +220,18 @@ void loop(void)
        Serial.print(",");
        Serial.print(gyro2.z());
        Serial.print(",");
+      
 
         // Read EMG Sensors
-       Serial.print(analogRead(A0));
+       Serial.print("0");  //disconnected
        Serial.print(",");
-       Serial.print(analogRead(A1));
+       Serial.print(analogRead(A1));  // sensor UNCOVERED
        Serial.print(",");
-       Serial.print(analogRead(A2));
+       Serial.print(analogRead(A2)); //sensor 2
        Serial.print(",");
-       Serial.print(analogRead(A3));
+       Serial.print(analogRead(A3)); // sensor 1
        Serial.print("\n");
+       delay(100);
       }
     }
     else if(mode ==  'C')// just used to test connection
